@@ -1,0 +1,21 @@
+Conclusiones:
+
+Permite crear usuarios con el mismo password
+Deberia devolver un body con los datos creados para un nuevo usuario, actualmente devuelve vacio
+
+Se podria aplicar schema validations para validar que tipo de datos  permite cada campo ya que 
+permite numeros y cualquier tipo de caracteres especiales en el nombre de usuario
+
+El manejo de status codes en los resultados se deberia manejar adecuadamente ya que cuando creamos un usuario 
+deberia devolver un 201.
+
+Al crear un usuario que ya existe el response deberia dar mayor detalle en el mensaje
+
+Al intentar hacer login con string vacios no  existe validacion de los campos directamente da error 500.
+
+Al colocar el user name incorrecto y el password correcto, el mensaje de error sigue saliendo "wrong password"
+
+Sin embargo se puede aplicar data driven testing realizando variasciones en los campos de entrada,
+asi tambien se podria realizar validacion de schemas de acuerdo a los tipos de datos que permite cada campo
+Tambien mencionar que podria ser posible implementar el aproach BDD en el framework para mejor entendimiento de
+los test cases para personal no tecnico.
