@@ -15,4 +15,4 @@ jobs:
           run: npm run eslint:run
         - name: Test
           run: npm run test:cli && npm run create:html:report
-        - uses: cypress-io/github-action@v6
+        ##- uses: cypress-io/github-action@v6
