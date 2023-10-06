@@ -8,4 +8,11 @@ module.exports = defineConfig({
     baseUrl:'https://api.demoblaze.com'
     
   },
+
+  "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
 });

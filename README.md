@@ -24,6 +24,13 @@ Run the test on heatless mode
 npm run cy:run
 ```
 
+To run tests and generate Html report run the follow commands:
+```javascript
+npm run test:cli
+```
+```javascript
+npm run create:html:report
+
 ## SUT
 For this example I used the following API:
 
