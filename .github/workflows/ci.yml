@@ -1,0 +1,18 @@
+name: End-to-end API tests
+on: [push, pull_request]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 18
+        - name: Install
+          run: npm install
+        - name: Eslint
+          run: npm run eslint:run
+        - name: Test
+          run: npm run test:cli && npm run create:html:report
+        - uses: cypress-io/github-action@v6
